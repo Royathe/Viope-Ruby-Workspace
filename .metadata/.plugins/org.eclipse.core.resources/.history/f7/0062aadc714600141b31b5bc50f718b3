@@ -1,0 +1,31 @@
+
+#TEHTÄVÄ 2
+
+toisto = "k"
+
+while toisto == "k"
+  print "Anna autolla ajetut kilometrit: "
+  km = gets.to_i
+  print "Anna bensanhinta: "
+  hinta = gets.to_f
+  print "Onko matka (1) maatieajoa vai (2) kaupunkiajoa?: "
+  valinta = gets.to_i
+  tulos = km * hinta
+  puts "Matka maksoi #{tulos} euroa"
+  print "Lasketaanko toinen matka? (k/e)?: "
+  toisto = gets.chomp
+end
+
+
+#TEHTÄVÄ 1
+=begin
+potenssi = 1
+
+puts "Anna luku: "
+arvo = gets.to_i
+
+while potenssi < 11
+  puts "#{potenssi}. potenssi on #{arvo ** potenssi}"
+  potenssi = potenssi + 1
+end
+=end

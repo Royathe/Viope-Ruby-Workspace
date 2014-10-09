@@ -1,0 +1,39 @@
+
+#TEHTÄVÄ 2
+
+print "Valitse x-akselin arvo väliltä 0-9: "; x = gets.to_i
+print "Valitse y-akselin arvo väliltä 0-9: "; y = gets.to_i
+
+if x < 5 and y < 5
+  puts "Olet vasemmassa alakulmassa."
+elsif x < 5 and y > 4
+  puts "Olet vasemmassa yläkulmassa."
+elsif x > 4 and y > 4
+  puts "Olet oikeassa yläkulmassa."
+elsif x > 4 and y < 5
+  puts "Olet oikeassa alakulmassa."
+end
+
+
+
+#TEHTÄVÄ 1
+=begin
+puts "Anna 1. luku:"
+arvo1 = gets
+arvo1 = arvo1.to_f
+puts "Anna 2. luku:"
+arvo2 = gets
+arvo2 = arvo2.to_f
+puts "(Y)hteen-, (V)ähennys- vai (K)ertolasku?"
+valinta = gets.chomp
+
+tulos = 0
+if valinta == "Y"
+  tulos = arvo1 + arvo2
+elsif valinta == "V"
+  tulos = arvo1 - arvo2
+elsif valinta == "K"
+  tulos = arvo1 * arvo2
+end
+puts "Tulos on #{tulos}"
+=end

@@ -1,0 +1,39 @@
+
+#TEHTÄVÄ 2
+
+tiedosto = File.open(".txt","w")
+
+teksti = ""
+
+while teksti != "lopeta"
+  
+  puts "Kirjoita jotain (lopeta lopettaa):"
+  teksti = gets.chomp
+  tiedosto.puts(teksti)
+  
+end
+tiedosto.close
+tiedosto = File.open(".txt","r")
+
+puts "Tiedostoon kirjoitettiin:"
+
+tiedosto.each {|rivi| print rivi}
+tiedosto.close
+
+
+
+
+#TEHTÄVÄ 1
+=begin
+tiedosto = File.open("5-1_tiedosto.txt","r")
+
+tiedosto.each {|rivi| print rivi}
+tiedosto.close
+=end
+
+
+
+
+
+
+

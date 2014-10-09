@@ -1,0 +1,51 @@
+
+#TEHTÄVÄ 3
+
+tiedosto = File.open("5-3_tiedosto.txt","r")
+text = tiedosto.read
+acount = text.count("a")
+fcount = text.count("f")
+
+puts "#{text.length} merkkiä: #{acount} a:ta, #{fcount} f:ää."
+
+#TEHTÄVÄ 2
+=begin
+tiedosto = File.open("5-2_tiedosto.txt","w")
+
+teksti = ""
+
+while teksti != "lopeta"
+  
+  puts "Kirjoita jotain (lopeta lopettaa):"
+  teksti = gets.chomp
+  
+  if teksti != "lopeta"
+    tiedosto.puts(teksti)
+  end
+  
+end
+tiedosto.close
+tiedosto = File.open("5-2_tiedosto.txt","r")
+
+puts "Tiedostoon kirjoitettiin:"
+
+tiedosto.each {|rivi| print rivi}
+tiedosto.close
+
+
+
+
+#TEHTÄVÄ 1
+=begin
+tiedosto = File.open("5-1_tiedosto.txt","r")
+
+tiedosto.each {|rivi| print rivi}
+tiedosto.close
+=end
+
+
+
+
+
+
+

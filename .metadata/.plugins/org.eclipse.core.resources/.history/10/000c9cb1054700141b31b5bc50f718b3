@@ -1,0 +1,38 @@
+
+#TEHTÄVÄ1
+
+print "Monenteenko lukuun asti etsitään?: "
+raja = gets.to_i
+luku = Array.new
+luku.push(1)
+luku.push(2)
+i = 2
+
+while i < raja
+  
+  for alkio in luku
+    if i % alkio == 0
+      puts "#{luku[i]} ei ole alkuluku."
+      break
+    end
+  end
+  puts "#{luku[i]} on alkuluku!"
+  luku.push(i)
+  i += 1
+end
+
+=begin
+while luku < raja
+  
+  if luku % 2 == 0 || luku % 3 == 0
+    puts "#{luku} ei ole alkuluku."
+  else
+    puts "#{luku} on alkuluku!"
+  end
+  luku += 1
+  
+end
+=end
+
+
+

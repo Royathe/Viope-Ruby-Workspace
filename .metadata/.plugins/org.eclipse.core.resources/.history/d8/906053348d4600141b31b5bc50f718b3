@@ -1,0 +1,59 @@
+
+#TEHTÄVÄ 3
+
+#tiedosto = File.open("6-3a_tiedosto.txt","r")
+
+filter = Array.new
+File.open("6-3a_tiedosto.txt","r").each{|rivi| filter.push(rivi.chomp)}
+filter = teksti.split(" ")
+
+teksti = Array.new
+File.open("6-3c_tiedosto.txt","r").each{|rivi| teksti.push(rivi.chomp)}
+teksti = teksti.split(" ")
+indeksi = 0
+
+for alkio in teksti
+  
+  if filter.include?(alkio)
+    teksti[indeksi] = "*****"
+  end
+  indeksi += 1
+end
+
+
+
+#TEHTÄVÄ 2
+=begin
+def muuntaja(syote)
+  
+  syote = syote.gsub("a","y")
+  syote = syote.gsub("l","g")
+  syote = syote.upcase
+  return syote
+  
+end
+
+puts "Kirjoita jotain:"
+syote = gets.chomp
+syote = muuntaja(syote)
+puts "Käsittelyn jälkeen tulos on: #{syote}"
+
+
+#TEHTÄVÄ 1
+=begin
+def tulostaja(text, kerta)
+  
+  until kerta < 1
+    puts text
+    kerta -= 1
+  end
+  
+end
+
+tulostaja("HALABALA",2)
+=end
+
+
+
+
+

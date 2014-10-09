@@ -1,0 +1,8 @@
+#TEHTÄVÄ 1
+taulu = Array.new(2)
+teksti1 = "Hei"
+teksti2 = "maailma!"
+taulu[0] = teksti1
+taulu[1] = teksti2
+
+puts taulu[0] + taulu[1]

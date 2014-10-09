@@ -1,0 +1,25 @@
+
+#TEHTÄVÄ 1
+
+suc = false
+
+while suc == false
+  begin
+  puts "Anna luettavan tiedoston nimi: "
+  tn = gets.chomp
+  tiedosto = File.open(tn,"r")
+  
+  teksti = tiedosto.read
+  print teksti
+  puts "Tämä teksti on luettu tiedostosta"
+  tiedosto.close
+  suc = true
+  
+  rescue
+    puts "Tiedoston nimi ei kelpaa"
+  end
+end
+
+
+
+

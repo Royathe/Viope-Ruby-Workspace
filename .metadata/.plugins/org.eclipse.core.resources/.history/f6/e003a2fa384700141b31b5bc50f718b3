@@ -1,0 +1,96 @@
+
+#TEHTÄVÄ 2
+
+def tarkistaja(luku)
+  
+  begin
+    luku = luku.to_f
+    return true
+  rescue
+    return false
+  end
+  
+end
+
+def kysyja()
+  valid = false
+  while valid == false
+    luku = gets.chomp
+    if tarkistaja(luku) == true
+      valid = true
+      luku = luku.to_f
+    end
+  end
+  return luku
+end
+
+valinta = 0
+
+print "Anna luku: "
+luku1 = kysyja()
+print "Anna luku: "
+luku2 = kysyja
+
+while valinta < 6
+  
+  puts "Arvot luku1 = #{luku1} ; luku2 = #{luku2}"
+  puts "1: + 2: - 3: * 4: / 5: Vaihda luvut 6: Lopeta"
+  print "Valitse toiminto: "
+  valinta = gets.to_i
+  
+  case valinta
+    when 1 then
+    tulos = luku1 + luku2
+    puts "Tulos on #{tulos}"
+    
+    when 2 then
+    tulos = luku1 - luku2
+    puts "Tulos on #{tulos}"
+    
+    when 3 then
+    tulos = luku1 * luku2
+    puts "Tulos on #{tulos}"
+    
+    when 4 then
+    tulos = luku1 / luku2
+    puts "Tulos on #{tulos}"
+    
+    when 5 then
+    print "Anna luku: "
+    luku1 = kysyja()
+    print "Anna luku: "
+    luku2 = kysyja
+    
+  end
+  
+  
+end
+
+num = "4xD"
+bool = tarkistaja(num)
+print bool
+
+
+#TEHTÄVÄ 1
+=begin
+f = false
+while f == false
+  begin
+  puts "Anna luettavan tiedoston nimi: "
+  tn = gets.chomp
+  tiedosto = File.open(tn,"r")
+  
+  teksti = tiedosto.read
+  print teksti
+  tiedosto.close
+  f = true
+  
+  rescue
+    puts "Tiedoston nimi ei kelpaa."
+  end
+end
+=end
+
+
+
+

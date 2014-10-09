@@ -1,0 +1,10 @@
+
+#TEHTÄVÄ 1
+puts "Anna 1. luku:"
+arvo1 = gets
+arvo1 = arvo1.to_i
+puts "Anna 2. luku:"
+arvo2 = gets
+arvo2 = arvo2.to_i
+puts "(Y)hteen-, (V)ähennys- vai (K)ertolasku?"
+valinta = gets

@@ -1,0 +1,11 @@
+
+teksti = "Tekstiä!"
+luku1 = 100
+luku2 = luku1 * 2 / 2
+puts "Muuttujia voi laittaa tulosteisiin: " + teksti
+puts "Niillä voi myös laskea: " + luku2.to_s
+
+
+
+#teksti = "moi maailma!"
+#puts teksti

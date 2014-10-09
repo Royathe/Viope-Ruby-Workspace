@@ -1,0 +1,22 @@
+
+#TEHTÄVÄ1
+
+print "Monenteenko lukuun asti etsitään?: "
+raja = gets.to_i
+luku = 2
+
+
+while luku < raja
+  
+  if luku % 2 == 0 || luku % 3 == 0
+    puts "#{luku} ei ole alkuluku."
+  else
+    puts "#{luku} on alkuluku!"
+  end
+  luku += 1
+  
+end
+
+
+
+

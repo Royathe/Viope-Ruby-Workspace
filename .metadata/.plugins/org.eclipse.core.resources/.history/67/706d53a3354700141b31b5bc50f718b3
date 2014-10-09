@@ -1,0 +1,44 @@
+
+#TEHTÄVÄ 2
+
+def tarkistaja(luku)
+  
+  begin
+    luku = luku.to_f
+    print luku
+    return true
+  rescue
+    return false
+  end
+  
+end
+
+
+num = "4xD"
+bool = tarkistaja(num)
+print bool
+
+
+#TEHTÄVÄ 1
+=begin
+f = false
+while f == false
+  begin
+  puts "Anna luettavan tiedoston nimi: "
+  tn = gets.chomp
+  tiedosto = File.open(tn,"r")
+  
+  teksti = tiedosto.read
+  print teksti
+  tiedosto.close
+  f = true
+  
+  rescue
+    puts "Tiedoston nimi ei kelpaa."
+  end
+end
+=end
+
+
+
+

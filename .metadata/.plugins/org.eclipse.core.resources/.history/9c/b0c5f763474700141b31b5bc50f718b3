@@ -1,0 +1,175 @@
+
+#TEHTÄVÄ 5
+
+class Elain
+  @@edellinen = ""
+  @@maara = 0
+    
+  def initialize(rotu, nimi)
+    @@edellinen = rotu
+    @nimi = nimi
+    @rotu = rotu
+    @@maara += 1
+  end
+  
+  def tiedot()
+    puts "Olen #{@rotu} ja nimeni on #{@nimi}!"
+  end
+  def poista()
+    puts "#{@nimi} poistettu!"
+    @@maara -= 1
+  end
+  def tilanne()
+    puts "Eläimiä on tällä hetkellä #{@@maara} kappaletta.\nViimeisin rekisteröity eläin oli #{@@edellinen}."
+  end
+  
+end
+
+koira = Elain.new("koira","Rekku")
+kissa = Elain.new("kissa","Raatelija")
+lintu = Elain.new("kanarialintu","Tirppa")
+koira.tiedot()
+kissa.poista()
+lintu.tilanne()
+
+
+
+#TEHTÄVÄ 4
+=begin
+class Tietopankki 
+  def initialize(aseta = "ei tietoja") 
+    @tiedot = aseta 
+  end 
+  
+  def muutatietoja(uusi) 
+    if uusi.length > 5 
+      @tiedot = uusi 
+    else 
+      puts "Virheellinen syöte" 
+    end 
+  end 
+  
+  def kerrotiedot 
+    print @tiedot 
+  end 
+  
+  def poistatiedot 
+    @tiedot = "poistettu" 
+  end 
+end 
+
+
+
+class LataavaTietopankki < Tietopankki
+  
+  def tallennatiedot()
+      File.open("9-4_tiedosto.txt","w").puts(@tiedot)
+  end
+  
+  def lataatiedot()
+    begin
+      tiedosto = File.open("9-4_tiedosto.txt","r")
+      teksti = tiedosto.read
+      if teksti.length > 4
+        @tiedot = teksti
+      end
+    rescue
+    end
+  end
+  
+end
+
+testi = LataavaTietopankki.new() 
+testi.muutatietoja("Tietopankki on paras pankki.\nJa Lataava vielä parempi.\n") 
+testi.kerrotiedot 
+testi.lataatiedot 
+testi.tallennatiedot 
+
+
+
+
+#TEHTÄVÄ 3
+=begin
+class Laatikko
+  def initialize(sisus = nil)
+    @sisus = sisus
+    begin
+    @koko = @sisus.length
+    rescue
+      @koko = 0
+    end
+  end
+  def sisus
+    return @sisus
+  end
+  def sisus= ( arvo )
+    @sisus = arvo
+    begin
+    @koko = @sisus.length
+    rescue
+      @koko = 0
+    end
+  end
+  
+  def nollaa()
+    @sisus = ""
+    begin
+    @koko = @sisus.length
+    rescue
+      @koko = 0
+    end
+  end
+  
+  def suuri?()
+    if @koko > 25
+      return true
+    else
+      return false
+    end
+  end
+end
+
+
+Varasto = Laatikko.new()
+Varasto.sisus = "hirviömeikkilaukkutelinetukijalka"
+tulos = Varasto.suuri?
+puts "Kokotestin tulos oli: #{tulos}."
+Varasto.nollaa
+tulos = Varasto.suuri?
+puts "Kokotestin tulos oli: #{tulos}."
+
+
+#TEHTÄVÄ 2
+=begin
+class Laatikko
+  def initialize(sisus = nil)
+    @sisus = sisus
+  end
+  def sisus
+    return @sisus
+  end
+  def sisus= ( arvo )
+    @sisus = arvo
+  end
+end
+
+
+Varasto = Laatikko.new()
+Varasto.sisus = "puuhapakki"
+
+puts "Varastossa on sisällä #{Varasto.sisus}."
+
+
+#TEHTÄVÄ 1
+=begin
+class Pelastaja
+  def initialize()
+    puts "Pelastaja on paikalla!"
+  end
+end
+
+uusi = Pelastaja.new()
+=end
+
+
+

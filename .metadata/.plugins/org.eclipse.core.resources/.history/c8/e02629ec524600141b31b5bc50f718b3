@@ -1,0 +1,19 @@
+#TEHTÄVÄ 3
+
+
+
+
+#TEHTÄVÄ 2
+#=begin
+teksti = "Tekstiä!"
+luku1 = 100
+luku2 = (luku1 * 2) / 10
+puts "Muuttujia voi laittaa tulosteisiin: " + teksti
+puts "Niillä voi myös laskea: #{luku2.to_s}" 
+#=end
+
+#TEHTÄVÄ 1
+=begin
+teksti = "moi maailma!"
+puts teksti
+=end

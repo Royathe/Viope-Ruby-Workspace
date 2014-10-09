@@ -1,0 +1,35 @@
+
+#TEHTÄVÄ 2
+
+class Laatikko
+  def initialize(sisus = nil)
+    @sisus = sisus
+  end
+  def sisus
+    return @sisus
+  end
+  def sisus= ( arvo )
+    @sisus = arvo
+  end
+end
+
+
+Varasto = Laatikko.new()
+Varasto.sisus = "puuhapakki"
+
+puts "Varastossa on sisällä #{Varasto.sisus}."
+
+
+#TEHTÄVÄ 1
+=begin
+class Pelastaja
+  def initialize()
+    puts "Pelastaja on paikalla!"
+  end
+end
+
+uusi = Pelastaja.new()
+=end
+
+
+

@@ -1,0 +1,20 @@
+
+#TEHTÄVÄ 1
+
+tulostaja("HALABALA",2)
+
+
+def tulostaja(text, kerta)
+  while kerta > 0
+    puts text
+    kerta = kerta - 1
+  end
+end
+
+
+
+
+
+
+
+

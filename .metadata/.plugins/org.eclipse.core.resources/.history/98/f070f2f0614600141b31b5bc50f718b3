@@ -1,0 +1,79 @@
+
+#TEHTÄVÄ 4
+
+puts "Oraakkeli vastaa kyllä/ei-muodossa"
+puts "Kirjoita kysymyksesi Oraakkelille:"
+teksti = gets
+puts "Kysymyksesi oli: #{teksti}"
+print "Tähän Oraakkeli vastasi: "
+
+sat = rand(100)
+case sat
+  when 0..19 then print "Ei missään nimessä!"
+  when 20..44 then print "Ei varmaankaan."
+  when 45..54 then print "En osaa sanoa."
+  when 55..79 then print "Luultavasti kyllä."
+  when 80..90 then print "Ehdottomasti kyllä."
+
+
+
+
+#TEHTÄVÄ 3
+=begin
+user = "Erkki"
+pass = "haukionkala"
+
+puts "Anna nimi: "
+nameinp = gets.chomp
+if nameinp == user
+  puts "Anna salasana: "
+  passinp = gets.chomp
+  if passinp == pass
+    puts "Hei Erkki!"
+  else
+    puts "Et ole Erkki."
+  end
+else
+  puts "En tunne sinua."
+end
+
+#TEHTÄVÄ 2
+=begin
+print "Valitse x-akselin arvo väliltä 0-9: "; x = gets.to_i
+print "Valitse y-akselin arvo väliltä 0-9: "; y = gets.to_i
+
+if x < 0 or y < 0
+  puts "Annoit negatiivisen arvon."
+elsif x < 5 and y < 5
+  puts "Olet vasemmassa alakulmassa."
+elsif x < 5 and y > 4
+  puts "Olet vasemmassa yläkulmassa."
+elsif x > 4 and y > 4
+  puts "Olet oikeassa yläkulmassa."
+elsif x > 4 and y < 5
+  puts "Olet oikeassa alakulmassa."
+end
+
+
+
+#TEHTÄVÄ 1
+=begin
+puts "Anna 1. luku:"
+arvo1 = gets
+arvo1 = arvo1.to_f
+puts "Anna 2. luku:"
+arvo2 = gets
+arvo2 = arvo2.to_f
+puts "(Y)hteen-, (V)ähennys- vai (K)ertolasku?"
+valinta = gets.chomp
+
+tulos = 0
+if valinta == "Y"
+  tulos = arvo1 + arvo2
+elsif valinta == "V"
+  tulos = arvo1 - arvo2
+elsif valinta == "K"
+  tulos = arvo1 * arvo2
+end
+puts "Tulos on #{tulos}"
+=end

@@ -1,0 +1,140 @@
+
+#TEHTÄVÄ 3
+
+#teksti = File.open("8-3_tiedosto.txt","r").read
+tiedosto = "Jo o34234.-,h,.-jelmisto&%/&#?%&#&tekniik%(/%/(%&an per(&%%uskur?%#?ssi,.-,.-
+l,.-3,.-4564609507863456la op6etetaan, että ainoa -,.as-,.i-a joka234687890 on 
+huon,om,.,.--pi kuin puuttee56l8linen doku645mentoint666i o,-/(?/&?/%&?,.n456,-
+virheellin-en d,.-okumentointi, ja että kaik156ist9a v4566i6isain-,..-,. eläin 
+o.n maja46345va645 jo6768k464a sukeltaa6134 sateelta %\"#/\"%suoj8aan.- ,.D,.,-
+okum4634en-taatio ja kä-,.yttöohjeet 456voiv37at mo6nes-,t24i va564ikutta-a 
+turha726lta,.- lisätyöltä, mutta n,-e eivät olekkaan t6,
+-,..45672116162ar4k8oitettu3644 kehittäj,.-26ille ,-,i4545454566666tselleen, 
+vaan (/%%(//&?%niill(&)&/()e jotka käyttävä47650t 26heidä,.-n. t456ekemiään 
+työkaluja,.-,,.. Ja vaikk46455a ajatus vahingon kiertämään924,.-6 l7478ai,.-
+tta3456misesta voikin ho76478538ukuttaa, olisi siin645ä tapauks,.-essa,.- 
+5h9arkits234emi,-,.s5789en arvoist3456a ennemmin ryhtyä vaikk-,.-a 
+autokauppiaaksi.4561835670"
+
+teksti = ""
+#tiedosto.each{|rivi| teksti += rivi}
+i = 0
+
+siivottuteksti = ""
+
+tiedosto.each_byte do |c|
+  
+  if (c > 64 and c < 91) or (c > 96 and c < 122)
+    #siivottuteksti += tiedosto[i]
+    print c
+  end
+  i += 1
+end
+
+print siivottuteksti
+
+=begin
+while i < teksti.length
+  
+  if teksti[index]
+  siivottuteksti += teksti[index]
+  i += 1
+end
+
+
+teksti.gsub!(/[^A-Za-z \n]/i, "")
+print teksti
+
+
+#TEHTÄVÄ 2
+=begin
+def tarkistaja(luku)
+  
+  begin
+    luku = luku.to_f
+    return true
+  rescue
+    return false
+  end
+  
+end
+
+def kysyja()
+  valid = false
+  while valid == false
+    luku = gets.chomp
+    if tarkistaja(luku) == true
+      valid = true
+      luku = luku.to_f
+    end
+  end
+  return luku
+end
+
+valinta = 0
+
+print "Anna luku: "
+luku1 = kysyja()
+print "Anna luku: "
+luku2 = kysyja
+print "\n"
+
+while valinta < 6
+  
+  puts "Arvot luku1 = #{luku1} ; luku2 = #{luku2}"
+  puts "1: + 2: - 3: * 4: / 5: Vaihda luvut 6: Lopeta"
+  print "Valitse toiminto: "
+  valinta = gets.to_i
+  
+  case valinta
+    when 1 then
+    tulos = luku1 + luku2
+    puts "Tulos on #{tulos}."
+    
+    when 2 then
+    tulos = luku1 - luku2
+    puts "Tulos on #{tulos}."
+    
+    when 3 then
+    tulos = luku1 * luku2
+    puts "Tulos on #{tulos}."
+    
+    when 4 then
+    tulos = luku1 / luku2
+    puts "Tulos on #{tulos}."
+    
+    when 5 then
+    print "Anna luku: "
+    luku1 = kysyja()
+    print "Anna luku: "
+    luku2 = kysyja
+    
+  end
+  
+  puts ""
+end
+
+
+#TEHTÄVÄ 1
+=begin
+f = false
+while f == false
+  begin
+  puts "Anna luettavan tiedoston nimi: "
+  tn = gets.chomp
+  tiedosto = File.open(tn,"r")
+  
+  teksti = tiedosto.read
+  print teksti
+  tiedosto.close
+  f = true
+  
+  rescue
+    puts "Tiedoston nimi ei kelpaa."
+  end
+end
+=end
+
+
+
+
